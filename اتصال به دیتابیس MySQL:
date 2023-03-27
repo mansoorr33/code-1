@@ -1,0 +1,14 @@
+<?php
+$host = 'localhost'; // نام هاست
+$username = 'نام کاربری دیتابیس'; // نام کاربری دیتابیس
+$password = 'رمز عبور دیتابیس'; // رمز عبور دیتابیس
+$db_name = 'نام دیتابیس'; // نام دیتابیس
+
+// اتصال به دیتابیس MySQL
+$conn = mysqli_connect($host, $username, $password, $db_name);
+
+// بررسی وضعیت اتصال
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+?>
