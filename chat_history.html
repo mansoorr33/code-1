@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat Tabs</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f6f6f6;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 800px;
+			margin: 0 auto;
+			background-color: #fff;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+			overflow: hidden;
+		}
+
+		.tab-links {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 10px 0;
+			border-bottom: 1px solid #eee;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.tab-links a {
+			display: block;
+			padding: 10px 20px;
+			color: #333;
+			text-decoration: none;
+			font-weight: bold;
+			border-right: 1px solid #eee;
+			transition: all 0.3s ease;
+		}
+
+		.tab-links a:last-child {
+			border-right: none;
+		}
+
+		.tab-links a.active {
+			background-color: #f6f6f6;
+			border-bottom: 2px solid #333;
+			color: #333;
+		}
+
+		.tab-content {
+			display: none;
+			padding: 20px;
+			min-height: 300px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.tab-content.active {
+			display: block;
+		}
+
+		.form-group {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 20px;
+		}
+
+		.form-group label {
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+
+		.form-group input[type="text"], .form-group textarea {
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			background-color: #f6f6f6;
+			margin-bottom: 10px;
+			box-sizing: border-box;
+			font-size: 16px;
+			resize: none;
+		}
+
+		.form-group button[type="submit"] {
+			background-color: #333;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		.form-group button[type="submit"]:hover {
+			background-color: #111;
+		}
+
+		.message {
+			background-color: #f6f6f6;
+			border-radius: 5px;
+			padding: 10px;
+			margin-bottom: 10px;
+			box-sizing: border-box;
+		}
+
+		.message .date {
+			font-size: 12px;
+			color: #666;
+			margin-bottom: 5px;
+		}
+
+		.message .content {
+			font-size: 16px;
+		}
+
+		.delete-message {
+			color: #f44336;
+			font-size: 12px;
+			cursor: pointer;
+			margin-left: 10px;
+			transition: all 0.3s ease;
+		}
+
+		.delete-message:hover {
+			color:
