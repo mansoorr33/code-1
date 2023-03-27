@@ -1,0 +1,17 @@
+<?php
+// چک کردن اینکه فرم ارسال پیام ارسال شده است یا خیر
+if (isset($_POST['submit'])) {
+    // دریافت مقادیر فرم
+    $name = $_POST['name'];
+    $message = $_POST['message'];
+    $date = date('Y-m-d H:i:s');
+
+    // افزودن پیام جدید به دیتابیس
+    $sql = "INSERT INTO messages (name, message, date) VALUES ('$name', '$message', '$date')";
+    if (mysqli_query($conn, $sql)) {
+        echo "پیام با موفقیت ارسال شد.";
+    } else {
+        echo "خطا: " . $sql . "<br>" . mysqli_error($conn);
+    }
+}
+?>
