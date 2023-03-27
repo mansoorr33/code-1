@@ -1,0 +1,5 @@
+<?php
+// بازیابی پیام های ذخیره شده از دیتابیس
+$sql = "SELECT * FROM messages ORDER BY date DESC";
+$result = mysqli_query($conn, $sql);
+?>
